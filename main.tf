@@ -26,7 +26,6 @@ resource "aws_instance" "gateway" {
 
   export FIREZONE_TOKEN="${var.firezone_tokens != null ? var.firezone_tokens[count.index] : var.firezone_token}"
   export FIREZONE_VERSION="${var.firezone_version}"
-  export FIREZONE_NAME="${var.firezone_name}"
   export FIREZONE_ID="$(head -c 32 /dev/urandom | sha256sum | cut -d' ' -f1)"
   export FIREZONE_API_URL="${var.firezone_api_url}"
   export FIREZONE_LOG_FORMAT="${var.log_format}"

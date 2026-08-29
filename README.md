@@ -114,7 +114,6 @@ parallel. Pinning `firezone_version`
 | `replicas` | The number of Gateway instances to deploy when using `firezone_token` (legacy). Must not be set with `firezone_tokens`. | `number` | `3` | no |
 | `instance_type` | The instance type. Gateways are lightweight; see [sizing recommendations](https://www.firezone.dev/kb/deploy/gateways#sizing-recommendations). | `string` | `"t3.nano"` | no |
 | `firezone_version` | The Gateway version to deploy. | `string` | `"latest"` | no |
-| `firezone_name` | Name for the Gateways, appears in the admin portal. | `string` | `"$(hostname)"` | no |
 | `firezone_api_url` | The Firezone API URL. | `string` | `"wss://api.firezone.dev"` | no |
 | `attach_public_ips` | Whether to attach public IPs to the instances. | `bool` | `true` | no |
 | `aws_eip_ids` | Elastic IP ids to attach to the instances. Must be the same length as `replicas` if provided. | `list(string)` | `[]` | no |
